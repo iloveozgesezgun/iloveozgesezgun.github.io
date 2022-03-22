@@ -13,13 +13,88 @@
 </head>
 
 <body>
-    <div class="pages">
-        <div class="page-image"></div>
-        <div class="page-text">
-            <p class="page-p"><span class="type" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler &nbsp;</span></p>
+    <div class="container-flex">
+        <div class="pages" id="pages">
+            <div class="page">
+                <div class="overlay-1"></div>
+                <div class="page-image page-1">
+                    <img src="https://github.com/iloveozgesezgun/iloveozgesezgun.github.io/blob/main/assets/img/20220311_190100.jpg?raw=true" alt="">
+                </div>
+                <div class="page-text">
+                    <p class="page-p"><span class="type" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
+                            &nbsp;</span></p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="overlay-2"></div>
+                <div class="page-image page-2">
+                    <img src="https://github.com/iloveozgesezgun/iloveozgesezgun.github.io/blob/main/assets/img/20220311_190100.jpg?raw=true" alt="">
+                </div>
+                <div class="page-text">
+                    <p class="page-p"><span id="page_1" class="d-none" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
+                            &nbsp;</span></p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="overlay-3"></div>
+                <div class="page-image page-3">
+                    <img src="https://github.com/iloveozgesezgun/iloveozgesezgun.github.io/blob/main/assets/img/20220311_190100.jpg?raw=true" alt="">
+                </div>
+                <div class="page-text">
+                    <p class="page-p"><span id="page_2" class="d-none" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
+                            &nbsp;</span></p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="overlay-4"></div>
+                <div class="page-image page-4">
+                    <img src="https://github.com/iloveozgesezgun/iloveozgesezgun.github.io/blob/main/assets/img/20220311_190100.jpg?raw=true" alt="">
+                </div>
+                <div class="page-text">
+                    <p class="page-p"><span id="page_3" class="d-none" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
+                            &nbsp;</span></p>
+                </div>
+            </div>
+            <div class="page" id="last_page">
+                <div class="overlay-5"></div>
+                <div class="page-image page-5">
+                    <img src="https://github.com/iloveozgesezgun/iloveozgesezgun.github.io/blob/main/assets/img/20220311_190100.jpg?raw=true" alt="">
+                </div>
+                <div class="page-text">
+                    <p class="page-p"><span id="page_4" class="d-none" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
+                            &nbsp;</span></p>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://raw.githubusercontent.com/customd/jquery-visible/62b48c8792a85edcf8d4e3c11f215c126d8e6376/jquery.visible.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+        var scrollPos = $(window).scrollTop();
+        var height = $(window).height();
+        
+        for (let i = 0; i < 12; i++) {
+            if (scrollPos>=(height*i)-100 && scrollPos<(height*i)+100) {
+                $('#page_'+i).removeClass('d-none');
+                $('#page_'+i).addClass('type');
+            }
+            
+        }
+        });
+        window.onload = function () {
 
+            new fullpage("#pages", {
+      sectionSelector: '.page',
+      navigation: true,
+      parallax: true,
+      scrollBar:true
+    });
+        }
+
+
+    </script>
 </body>
 
 </html>

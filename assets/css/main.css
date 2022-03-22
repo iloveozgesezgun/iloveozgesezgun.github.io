@@ -3,14 +3,18 @@
 
 body {
     font-family: 'Source Code Pro';
-    font-weight: 300;
+    font-weight: 400;
     font-size:50px;
-    padding:20px;
-    background:#000;
-    color:#fff;
+    padding:0;
+    background:#fff;
+    color:#000;
   }
   
+
+
+
   .type {
+    display: inline !important;
     color:#0000;
     background: linear-gradient(-90deg,#dfdb21 5px,#0000 0) 10px 0, linear-gradient(#fff 0 0) 0 0;
     background-size:calc(var(--n)*1ch) 200%;
@@ -20,14 +24,114 @@ body {
     animation: 
      b .5s infinite steps(1),   
      t calc(var(--n)*.1s) steps(var(--n)) forwards;
+     z-index: 99;
   }
   
+  
   .page-text {
-      margin-top: 70vh;
+      padding-top: 70vh;
+      padding-left: 30px;
+      z-index: 99;
+  }
+
+  .page-image {
+    margin: 0 auto;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease;
+    
+  }
+
+  .page-1 {
+    background-color: rgb(102, 16, 242);
+  }
+
+  .overlay-1 {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(102, 16, 242, .5);
+}
+
+
+
+  .page-2 {
+      background-color: rgb(7, 160, 195);
+  }
+
+  .overlay-2 {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(7, 160, 195, 0.5);
+}
+
+  .page-3 {
+      background-color: rgb(215, 38, 61);
+  }
+
+  .overlay-3 {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(215, 38, 61, .5);
+}
+
+  .page-4 {
+      background-color: rgb(255, 174, 3);
+  }
+
+  .overlay-4 {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 174, 3, .5);
+}
+
+
+  .page-5 {
+      background-color: rgb(49, 233, 129);
+  }
+
+  .overlay-5 {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(49, 233, 129, .5);
+}
+
+  .page-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    transition: .5s ease;
   }
 
 
+  .page {
+      width: 100%;
+      min-height: 100vh;
+      max-height: 100vh;
+      transition: .5s;
+      z-index: -100;
+      scroll-snap-align: start;
+      display: flex;
+  }
 
+
+ 
   @keyframes t{
     from {background-size:0 200%}
   }
