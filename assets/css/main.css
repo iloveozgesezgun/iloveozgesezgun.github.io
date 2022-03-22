@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;900&display=swap');
+
+
+body {
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+    font-size:50px;
+    padding:20px;
+    background:#000;
+    color:#fff;
+  }
+  
+  .type {
+    color:#0000;
+    background: linear-gradient(-90deg,#dfdb21 5px,#0000 0) 10px 0, linear-gradient(#fff 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
+    animation: 
+     b .5s infinite steps(1),   
+     t calc(var(--n)*.1s) steps(var(--n)) forwards;
+  }
+  
+  .page-text {
+      margin-top: 70vh;
+  }
+
+
+
+  @keyframes t{
+    from {background-size:0 200%}
+  }
+  @keyframes b{
+    50% {background-position:0 -100%,0 0}
+  }
