@@ -27,7 +27,7 @@
                 <div class="page-image page-1">
                 </div>
                 <div class="page-text">
-                    <p class="page-p"><span class="type" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
+                    <p class="page-p"><span id="page_0" class="d-none" style="--n:40">Özge Sezgün Hakkında <br>Az Bilinen Gerçekler
                             &nbsp;</span></p>
                 </div>
             </div>
@@ -181,6 +181,9 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
+            $('#page_0').removeClass('d-none');
+            $('#page_0').addClass('type');
+
             $(window).scroll(function () {
             
 
@@ -202,7 +205,11 @@
                     $('#page_' + i).removeClass('d-none');
                     $('#page_' + i).addClass('type');
                 }
-
+                else if (scrollPos >= (height * (i+1)) || scrollPos < (height * i) + 100)
+                {
+                    $('#page_' + i).removeClass('type');
+                    $('#page_' + i).addClass('d-none');
+                }
             }
         });
 
