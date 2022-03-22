@@ -136,6 +136,13 @@ box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
       display: flex;
   }
 
+  .music-box {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 999;
+    width: 200px;
+}
 
   .music-box {
       position: fixed;
