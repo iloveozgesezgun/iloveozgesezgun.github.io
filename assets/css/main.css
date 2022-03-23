@@ -191,7 +191,7 @@ box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
     .page-text {
         padding-left: 12px !important;
         padding-right: 12px;
-        bottom: 6vh;
+        bottom: 10vh !important;
     }
 
     .page-image img {
